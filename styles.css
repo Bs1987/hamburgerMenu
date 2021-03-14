@@ -1,0 +1,31 @@
+body{
+    margin: 32px;
+}
+
+
+
+:root {
+    --main-bg-color: #D84282;
+    --default-margin: 16px;
+}
+
+#menu{
+    display: block;
+    content: "";
+    width: 200px;
+    height: 10px;
+    border-top: solid thick var(--main-bg-color);
+    border-bottom: solid thick var(--main-bg-color);
+
+}
+
+
+#menu::before {
+    content: "";
+    display: block;
+    margin-top: 25px;
+    width: 200px;
+    border-top: thick solid var(--main-bg-color);
+}
+
+
