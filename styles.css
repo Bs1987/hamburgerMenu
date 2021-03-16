@@ -1,31 +1,37 @@
-body{
+body {
     margin: 32px;
 }
 
-
-
 :root {
-    --main-bg-color: #D84282;
-    --default-margin: 16px;
+    --menu-bar-width: 60px;
+    --menu-bar-height: 10px;
+    --background-color: #D84282;
 }
 
-#menu{
+#menu {
+    background-color: var(--background-color);
+    position: relative;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    margin: 200px;
+}
+
+#menu::before,
+#menu::after {
+    background-color: var(--background-color);
     display: block;
     content: "";
-    width: 200px;
-    height: 10px;
-    border-top: solid thick var(--main-bg-color);
-    border-bottom: solid thick var(--main-bg-color);
-
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    position: absolute;
 }
-
 
 #menu::before {
-    content: "";
-    display: block;
-    margin-top: 25px;
-    width: 200px;
-    border-top: thick solid var(--main-bg-color);
+    left: 0;
+    top: -20px;
 }
 
-
+#menu::after {
+    left: 0;
+    top: 20px;
+}
